@@ -14,11 +14,15 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'hp' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'hp' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'hp' ), 'hp', '<a href="http://FEBBR" rel="designer">FEBBR</a>' ); ?>
-		</div><!-- .site-info -->
+		<div id="social-network">
+			<span class="fa flaticon-circle"></span>
+			<span class="fa flaticon-social"></span>
+			<span class="fa flaticon-social-1"></span>
+			<span class="fa flaticon-social-2"></span>
+		</div>
+		<div id="link-footer">
+
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
