@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo" width:207px + 64px>
+	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div id="social-network">
 			<span class="fa flaticon-circle"></span>
 			<span class="fa flaticon-social"></span>
