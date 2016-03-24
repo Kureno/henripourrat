@@ -84,6 +84,8 @@ html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
+	position: relative;
+	min-height: 100%;
 }
 
 body {
@@ -573,7 +575,7 @@ a {
 }
 
 a:visited {
-
+	text-decoration: none;
 }
 
 a:hover,
@@ -596,6 +598,10 @@ a:-webkit-any-link {
 	text-decoration: none;
 }
 
+a{
+	text-decoration: none -moz-none;
+}
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -616,6 +622,10 @@ a:-webkit-any-link {
 
 #primary-menu{
 	float: right;
+}
+
+.menu-main-container{
+	display: inline;
 }
 
 .main-navigation ul {
