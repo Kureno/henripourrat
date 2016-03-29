@@ -15,10 +15,12 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div id="social-network">
-			<span class="fa flaticon-circle"></span>
-			<span class="fa flaticon-social"></span>
-			<span class="fa flaticon-social-1"></span>
-			<span class="fa flaticon-social-2"></span>
+			<div class="wrapper">
+				<a href=""><span class="fa flaticon-social"></span></a>
+				<a href=""><span class="fa flaticon-social-1"></span></a>
+				<a href=""><span class="fa flaticon-circle"></span></a>
+				<a href=""><span class="fa flaticon-social-2"></span></a>
+			</div>
 		</div>
 		<div id="link-footer">
 

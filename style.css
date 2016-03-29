@@ -84,6 +84,8 @@ html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
+	position: relative;
+	min-height: 100%;
 }
 
 body {
@@ -158,6 +160,11 @@ mark {
 
 small {
 	font-size: 80%;
+}
+
+.wrapper{
+	width:80%;
+	margin:0 auto;
 }
 
 sub,
@@ -568,7 +575,7 @@ a {
 }
 
 a:visited {
-	color: purple;
+	text-decoration: none;
 }
 
 a:hover,
@@ -584,6 +591,15 @@ a:focus {
 a:hover,
 a:active {
 	outline: 0;
+}
+
+/*on surcharge chrome*/
+a:-webkit-any-link {
+	text-decoration: none;
+}
+
+a{
+	text-decoration: none -moz-none;
 }
 
 /*--------------------------------------------------------------
@@ -606,6 +622,10 @@ a:active {
 
 #primary-menu{
 	float: right;
+}
+
+.menu-main-container{
+	display: inline;
 }
 
 .main-navigation ul {
@@ -735,6 +755,22 @@ a:active {
 #link-footer{
 	height:64px;
 	background-color: #000;
+}
+
+#social-network [class^="flaticon-"]:before, #social-network [class*=" flaticon-"]:before, #social-network [class^="flaticon-"]:after, #social-network [class*=" flaticon-"]:after {
+	font-family: Flaticon;
+	font-size: 60px;
+	color:white;
+	padding:50px;
+	line-height: 207px;
+}
+
+#social-network .wrapper {
+	text-align: center;
+}
+
+#social-network .wrapper a:visited{
+	text-decoration: none;
 }
 
 /*--------------------------------------------------------------
