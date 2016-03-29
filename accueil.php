@@ -25,5 +25,4 @@ get_header(); ?>
     <?php endif; wp_reset_query(); ?>
 </section>
 <?php
-get_sidebar();
 get_footer();
