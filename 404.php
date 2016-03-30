@@ -7,8 +7,6 @@
  * @package Henri_Pourrat
  */
 
-// Test
-
 get_header(); ?>
 
     <div id="primary" class="content-area">
