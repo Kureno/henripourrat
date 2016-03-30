@@ -19,5 +19,4 @@ Template Name: Articles
 get_header(); ?>
 <div>TOTO</div>
 <?php
-get_sidebar();
 get_footer();
