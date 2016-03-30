@@ -7,22 +7,15 @@ Template Name: Accueil
 get_header(); ?>
 <section id="accueil_actu">
     <?php query_posts('showposts=3'); if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-        <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-        <p><?php the_date(); ?></p>
+        <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+        echo $thumb['1']; ?>
+        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <?php the_date(); ?>
         <?php the_content(); ?>
-        <p><?php the_tags(); ?></p>
+        <?php the_tags(); ?>
 
     <?php endwhile;?>
-
-        <p><?php next_posts_link(); ?></p>
-        <p><?php previous_posts_link(); ?></p>
-
-    <?php else : ?>
-
-        <h1>Not Found</h1>
-
-    <?php endif; wp_reset_query(); ?>
+     <?php endif; wp_reset_query(); ?>
 </section>
 <?php
 get_footer();
