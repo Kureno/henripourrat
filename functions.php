@@ -126,6 +126,11 @@ function hp_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'hp_scripts' );
 
+function the_thumb_url() {
+	$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+	echo $thumb[0];
+}
+
 /**
  * Implement the Custom Header feature.
  */
@@ -150,3 +155,89 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/* Custom Post Livres */
+
+function my_custom_post_livre() {
+	$labels = array(
+		'name'               => _x( 'Livres', 'post type general name' ),
+		'singular_name'      => _x( 'livre', 'post type singular name' ),
+		'add_new'            => _x( 'Ajouter', 'book' ),
+		'add_new_item'       => __( 'Ajouter un nouveau livre' ),
+		'edit_item'          => __( 'Modifié le livre' ),
+		'new_item'           => __( 'Nouveau livre' ),
+		'all_items'          => __( 'Tout les livres' ),
+		'view_item'          => __( 'Voir livre' ),
+		'search_items'       => __( 'Rechercher un livre' ),
+		'not_found'          => __( 'Aucun livre trouvé' ),
+		'not_found_in_trash' => __( 'Aucun livre dans la corbeille' ),
+		'parent_item_colon'  => '',
+		'menu_name'          => 'Livres'
+	);
+	$args = array(
+		'labels'        => $labels,
+		'hirarchical' => false,
+		'description'   => 'Livres',
+		'public'        => true,
+		'menu_position' => 6,
+		'supports'      => array(),
+		'has_archive'   => true,
+		'taxonomies' => array ()
+	);
+	register_post_type( 'livre', $args );
+}
+add_action( 'init', 'my_custom_post_livre' );
+
+/* Custom Post Actu */
+
+function my_custom_post_actu() {
+	$labels = array(
+		'name'               => _x( 'Actualités', 'post type general name' ),
+		'singular_name'      => _x( 'actualité', 'post type singular name' ),
+		'add_new'            => _x( 'Ajouter', 'book' ),
+		'add_new_item'       => __( 'Ajouter une actualitée' ),
+		'edit_item'          => __( 'Modifié une actualitée' ),
+		'new_item'           => __( 'Nouvelle actualitée' ),
+		'all_items'          => __( 'Toutes les actualitée' ),
+		'view_item'          => __( 'Voir actualitée' ),
+		'search_items'       => __( 'Rechercher une actualitée' ),
+		'not_found'          => __( 'Aucune actualitée trouvé' ),
+		'not_found_in_trash' => __( 'Aucune actualitée dans la corbeille' ),
+		'parent_item_colon'  => '',
+		'menu_name'          => 'Actualités'
+	);
+	$args = array(
+		'labels'        => $labels,
+		'hirarchical' => false,
+		'description'   => 'Actualités',
+		'public'        => true,
+		'menu_position' => 6,
+		'supports'      => array(),
+		'has_archive'   => true,
+		'taxonomies' => array ()
+	);
+	register_post_type( 'actualité', $args );
+}
+add_action( 'init', 'my_custom_post_actu' );
+
+/* Custom Post Paramètres */
+
+function my_custom_post_parametre() {
+	$labels = array(
+		'name'               => _x( 'Paramètres', 'post type general name' ),
+		'singular_name'      => _x( 'paramètre', 'post type singular name' ),
+		'menu_name'          => 'Paramètres'
+	);
+	$args = array(
+		'labels'        => $labels,
+		'hirarchical' => false,
+		'description'   => 'Paramètres',
+		'public'        => true,
+		'menu_position' => 6,
+		'supports'      => array(),
+		'has_archive'   => true,
+		'taxonomies' => array ()
+	);
+	register_post_type( 'paramètre', $args );
+}
+add_action( 'init', 'my_custom_post_parametre' );
